@@ -1,0 +1,19 @@
+services:
+  mysql:
+    container_name: mysql_rwazi
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rwazi
+      MYSQL_USER: rwazi
+      MYSQL_PASSWORD: rwazi
+      MYSQL_DATABASE: rwazi
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+networks:
+  mysql:
+    driver: bridge
+
+volumes:
+  mysql:

@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "driver": "mysql",
+    "multipleStatements": true,
+    "user": "rwazi",
+    "password": "rwazi",
+    "host": "localhost",
+    "database": "rwazi",
+    "port": 3306
+  },
+  "test": {
+    "driver": "mysql",
+    "multipleStatements": true,
+    "user": "rwazi",
+    "password": "rwazi",
+    "host": "localhost",
+    "database": "rwazi",
+    "port": { "ENV": "MYSQL_PORT" }
+  },
+  "prod": {
+    "driver": "mysql",
+    "multipleStatements": true,
+    "user": { "ENV": "MYSQL_USERNAME" },
+    "password": { "ENV": "MYSQL_PASSWORD" },
+    "host": { "ENV": "MYSQL_HOST" },
+    "database": { "ENV": "MYSQL_DB_NAME" },
+    "port": { "ENV": "MYSQL_PORT" }
+  }
+}
